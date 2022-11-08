@@ -2,4 +2,4 @@
 - 👀 I’m interested in IoT 
 - 🌱 I’m currently learning IoT and DevOps
 
-[![My Skills](https://skillicons.dev/icons?i=arduino,bootstrap,css,docker,firebase,git,github,gitlab,gradle,godot,graphql,html,heroku,idea,ai,js,jquery,laravel,materialui,mongodb,mysql,nextjs,nginx,nodejs,ps,php,pug,py,raspberrypi,react,redux,sass,stackoverflow,svg,ts,vscode,wasm,webpack,wordpress)](https://roozbahani.com)
+[![My Skills](https://skillicons.dev/icons?i=html,css,js,jquery,react,nextjs,redux,sass,ts,nodejs,bootstrap,materialui,pug,wasm,webpack,laravel,mongodb,mysql,nginx,php,arduino,raspberrypi,docker,firebase,git,github,gitlab,gradle,godot,graphql,heroku,idea,py,stackoverflow,svg,vscode,wordpress,ai,ps)](https://roozbahani.com)
