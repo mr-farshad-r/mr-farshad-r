@@ -3,8 +3,6 @@
 
 <p align="left"> <img src="https://komarev.com/ghpvc/?username=mr-farshad-r&label=Profile%20views&color=0e75b6&style=flat" alt="mr-farshad-r" /> </p>
 
-<p align="left"> <a href="https://github.com/ryo-ma/github-profile-trophy"><img src="https://github-profile-trophy.vercel.app/?username=mr-farshad-r" alt="mr-farshad-r" /></a> </p>
-
 <p align="left"> <a href="https://twitter.com/mr_farshad_r" target="blank"><img src="https://img.shields.io/twitter/follow/mr_farshad_r?logo=twitter&style=for-the-badge" alt="mr_farshad_r" /></a> </p>
 
 - 🌱 I’m currently learning **IoT devices.**
