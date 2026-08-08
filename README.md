@@ -1,5 +1,3 @@
-<img src="https://github-readme-stats.vercel.app/api?username=mr-farshad-r&theme=transparent&hide_border=true&include_all_commits=true&count_private=true&layout=compact&title_color=61DAFB&text_color=8B949E" align="right" width="50%" alt="Farshad's GitHub stats" />
-
 ### 👋 Hi, I'm **Farshad Roozbahani**
 
 **Software Engineer** focused on **Front-End Development** with React.
@@ -108,22 +106,3 @@ Programming is not just a job for me — it's a craft I keep refining every day.
 ![Adobe Premiere Pro](https://img.shields.io/badge/Adobe%20Premiere%20Pro-9999FF.svg?style=flat&logo=Adobe%20Premiere%20Pro&logoColor=white)
 
 </details>
-
----
-
-### 📊 GitHub Stats
-
-<p>
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=mr-farshad-r&theme=transparent&hide_border=true&include_all_commits=true&count_private=true&layout=compact&title_color=61DAFB&text_color=8B949E" width="49%" alt="Top Languages" />
-  <img src="https://nirzak-streak-stats.vercel.app/?user=mr-farshad-r&theme=transparent&hide_border=true&ring=61DAFB&fire=61DAFB&currStreakLabel=61DAFB" width="49%" alt="GitHub Streak" />
-</p>
-
----
-
-<div align="center">
-
-<img src="https://visitcount.itsvg.in/api?id=mr-farshad-r&icon=0&color=0" alt="Visitor count" />
-
-</div>
-
-<!-- Proudly created with GPRM ( https://gprm.itsvg.in ) — refined by hand -->
