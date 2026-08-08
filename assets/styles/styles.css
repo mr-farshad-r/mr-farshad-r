@@ -317,21 +317,6 @@ p {
     color: var(--text-muted);
 }
 
-/* ── Stats ── */
-
-.stat-card {
-    max-width: 100%;
-    width: 460px;
-    height: auto;
-    filter: grayscale(100%) brightness(0.9);
-    border-radius: 8px;
-    transition: filter .4s ease;
-}
-
-.stat-card:hover {
-    filter: grayscale(0%) brightness(1);
-}
-
 /* ── Footer ── */
 
 .footer {
@@ -649,10 +634,6 @@ p {
 
     .links-grid {
         grid-template-columns: repeat(2, 1fr);
-    }
-
-    .stat-card {
-        width: 100%;
     }
 }
 
