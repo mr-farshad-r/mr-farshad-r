@@ -1,0 +1,14 @@
+title: Farshad Roozbahani
+description: Software Engineer focused on Front-End Development with React
+url: https://roozbahani.com
+markdown: kramdown
+kramdown:
+  input: GFM
+permalink: /blog/:year/:month/:day/:title/
+plugins:
+  - jekyll-seo-tag
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
