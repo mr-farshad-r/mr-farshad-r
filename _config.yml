@@ -1,12 +1,34 @@
 title: Farshad Roozbahani
-description: Software Engineer focused on Front-End Development with React
+tagline: Software Engineer and Front-End Developer
+description: Farshad Roozbahani is a software engineer specializing in React, TypeScript, accessible interfaces, design systems, and modern web development.
 url: https://roozbahani.com
+baseurl: ""
+lang: en_US
+author:
+  name: Farshad Roozbahani
+  url: https://roozbahani.com
+  picture: /assets/images/avatar.png
+twitter:
+  username: mr_farshad_r
+  card: summary
+social:
+  name: Farshad Roozbahani
+  links:
+    - https://github.com/mr-farshad-r
+    - https://linkedin.com/in/farshad-roozbahani-b82022b2
+    - https://x.com/mr_farshad_r
+    - https://instagram.com/developina_
 markdown: kramdown
 kramdown:
   input: GFM
 permalink: /blog/:year/:month/:day/:title/
 plugins:
   - jekyll-seo-tag
+defaults:
+  - scope:
+      path: ""
+    values:
+      image: /assets/images/avatar.png
 exclude:
   - Gemfile
   - Gemfile.lock

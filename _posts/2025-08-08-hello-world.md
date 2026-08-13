@@ -2,6 +2,7 @@
 layout: post
 title: "Hello World"
 date: 2025-08-08
+description: An introduction to Farshad Roozbahani's software engineering blog, covering React, front-end architecture, accessibility, DevOps, and design.
 ---
 
 Welcome to my corner of the internet.

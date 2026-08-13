@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Blog
+description: Practical articles about React, JavaScript, TypeScript, front-end architecture, DevOps, CI/CD, accessibility, and modern web development.
 ---
 
 <div class="blog-page">
