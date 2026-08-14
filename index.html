@@ -18,10 +18,10 @@ description: Farshad Roozbahani is a software engineer specializing in React, Ty
             Building <span class="typed" id="typed"></span><span class="cursor">_</span>
         </p>
 
-        <nav class="nav-links">
-            <a href="{{ '/blog/' | relative_url }}">Blog</a>
-            <a onclick="openAbout()">About</a>
-            <a href="https://github.com/mr-farshad-r" target="_blank" rel="noopener">GitHub</a>
+        <nav class="nav-links" aria-label="Primary navigation">
+            <a href="{{ '/blog/' | relative_url }}"><span>Blog</span></a>
+            <button type="button" onclick="openAbout()"><span>About</span></button>
+            <a href="https://github.com/mr-farshad-r" target="_blank" rel="noopener noreferrer"><span>GitHub</span></a>
         </nav>
 
     </aside>
@@ -32,76 +32,130 @@ description: Farshad Roozbahani is a software engineer specializing in React, Ty
         <section class="section">
             <h2 class="section-title"><span class="num">01</span> About</h2>
             <p class="lead">
-                I'm a software engineer focused on front-end development with React.
-                I build fast, accessible, and maintainable user interfaces — turning
-                complex requirements into clean component architectures.
+                I'm a front-end engineer and team lead with 10+ years of experience
+                building web and mobile products with React, TypeScript, and JavaScript.
             </p>
             <p class="text-muted">
-                Programming is not just a job for me — it's a craft I keep refining every day.
-                Currently working on large-scale merchant-facing applications with React,
-                TypeScript, CRACO, TailwindCSS, and react-hook-form.
+                I lead front-end teams, mentor engineers, and work across product, design,
+                and back-end disciplines to turn complex requirements into accessible,
+                scalable user experiences.
             </p>
         </section>
 
         <section class="section">
             <h2 class="section-title"><span class="num">02</span> Skills</h2>
-            <div class="skills-grid">
+            <div class="skills-grid skills-grid--three">
                 <div class="skill-col">
                     <h3>Front-End</h3>
                     <ul class="skill-list">
                         <li>React, Next.js, React Native</li>
                         <li>TypeScript, JavaScript</li>
-                        <li>Redux, React Query, Hook Form</li>
-                        <li>TailwindCSS, MUI, Chakra</li>
-                        <li>GraphQL, Apollo</li>
+                        <li>Redux, React Query, Context API</li>
+                        <li>React Hook Form, React Router</li>
+                        <li>TailwindCSS, MUI, Ant Design</li>
                     </ul>
                 </div>
                 <div class="skill-col">
                     <h3>Back-End</h3>
                     <ul class="skill-list">
                         <li>Node.js, Express</li>
-                        <li>PHP, Laravel</li>
-                        <li>Python, Flask</li>
+                        <li>PHP, Laravel, CodeIgniter</li>
                         <li>MongoDB, MySQL, Redis</li>
-                        <li>Docker, Nginx</li>
+                        <li>GraphQL, REST, WebSocket</li>
+                    </ul>
+                </div>
+                <div class="skill-col">
+                    <h3>Quality &amp; Delivery</h3>
+                    <ul class="skill-list">
+                        <li>Cypress, Jest, accessibility</li>
+                        <li>Webpack, Vite, ESLint</li>
+                        <li>Docker, Nginx, CI/CD</li>
+                        <li>GitHub, GitLab, Jira</li>
+                        <li>Figma, Postman, Swagger</li>
                     </ul>
                 </div>
             </div>
         </section>
 
         <section class="section">
-            <h2 class="section-title"><span class="num">03</span> Connect</h2>
+            <h2 class="section-title"><span class="num">03</span> Experience</h2>
+            <ol class="experience-list">
+                <li class="experience-item">
+                    <div class="experience-heading">
+                        <div>
+                            <h3>Specialist (Team Lead) / Senior Front-End Engineer</h3>
+                            <p>Snapp! Pay</p>
+                        </div>
+                        <time datetime="2023-10">2023 — Present</time>
+                    </div>
+                    <p>Leading and mentoring a front-end team while delivering scalable fintech applications with React, Redux, TypeScript, Webpack, testing, accessibility, and CI/CD.</p>
+                </li>
+                <li class="experience-item">
+                    <div class="experience-heading">
+                        <div>
+                            <h3>Senior Front-End Developer</h3>
+                            <p>Techran</p>
+                        </div>
+                        <time>2022 — 2023</time>
+                    </div>
+                    <p>Built enterprise software for the German market using React, React Query, SharePoint, PnP.js, and Highcharts.</p>
+                </li>
+                <li class="experience-item">
+                    <div class="experience-heading">
+                        <div>
+                            <h3>Programming Teacher</h3>
+                            <p>LAITEC, Sharif University</p>
+                        </div>
+                        <time>2017 — 2023</time>
+                    </div>
+                    <p>Taught and mentored students across front-end and back-end web development, from JavaScript and React to Node.js and databases.</p>
+                </li>
+                <li class="experience-item experience-item--earlier">
+                    <div class="experience-heading">
+                        <div>
+                            <h3>Earlier Experience</h3>
+                            <p>Fake Factory · Calistu · IDPF · Verna · Khaatam</p>
+                        </div>
+                        <time>2012 — 2022</time>
+                    </div>
+                    <p>Co-founded a Cardano NFT product, led front-end teams, and shipped ERP, CRM, payments, real-time games, dashboards, and React Native applications.</p>
+                </li>
+            </ol>
+        </section>
+
+        <section class="section">
+            <h2 class="section-title"><span class="num">04</span> Connect</h2>
             <div class="links-grid">
-                <a href="https://github.com/mr-farshad-r" target="_blank" rel="noopener" class="link-card">
+                <a href="https://github.com/mr-farshad-r" target="_blank" rel="noopener noreferrer" class="link-card" aria-label="View Farshad Roozbahani on GitHub (opens in a new tab)">
                     <svg class="link-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4.5a7.5 7.5 0 0 0-2.4 14.6c.4.1.5-.2.5-.4v-1.5c-2.2.5-2.7-.9-2.7-.9-.4-.9-.9-1.1-.9-1.1-.7-.5 0-.5 0-.5.8.1 1.2.8 1.2.8.7 1.2 1.8.8 2.3.6.1-.5.3-.8.5-1-1.8-.2-3.6-.9-3.6-3.9 0-.8.3-1.4.8-1.9-.1-.2-.3-1 .1-2.1 0 0 .6-.2 2 .8a6.8 6.8 0 0 1 3.6 0c1.3-1 2-.8 2-.8.4 1.1.2 1.9.1 2.1.5.5.8 1.1.8 1.9 0 3-1.8 3.7-3.6 3.9.3.2.5.7.5 1.4v2.1c0 .2.1.5.5.4A7.5 7.5 0 0 0 12 4.5z" fill="currentColor"/></svg>
-                    <span>GitHub</span>
+                    <span class="link-content"><strong>GitHub</strong><small>@mr-farshad-r</small></span><span class="link-arrow" aria-hidden="true">&#8599;</span>
                 </a>
                 <a href="https://linkedin.com/in/farshad-roozbahani-b82022b2" target="_blank" rel="noopener" class="link-card">
                     <svg class="link-icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="3" fill="none" stroke="currentColor" stroke-width="1.7"/><circle cx="9" cy="9" r="1" fill="currentColor"/><path d="M8.5 11.5v4.5M12 16v-2.4c0-1 1-1.5 1.8-1.5.9 0 1.7.5 1.7 1.9V16" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                    <span>LinkedIn</span>
+                    <span class="link-content"><strong>LinkedIn</strong><small>View professional profile</small></span><span class="link-arrow" aria-hidden="true">&#8599;</span>
                 </a>
                 <a href="https://instagram.com/developina_" target="_blank" rel="noopener" class="link-card">
                     <svg class="link-icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="5" fill="none" stroke="currentColor" stroke-width="1.7"/><circle cx="12" cy="12" r="3.5" fill="none" stroke="currentColor" stroke-width="1.7"/><circle cx="16.5" cy="7.5" r="1" fill="currentColor"/></svg>
-                    <span>Instagram</span>
+                    <span class="link-content"><strong>Instagram</strong><small>@developina_</small></span><span class="link-arrow" aria-hidden="true">&#8599;</span>
                 </a>
                 <a href="https://x.com/mr_farshad_r" target="_blank" rel="noopener" class="link-card">
                     <svg class="link-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h3.5l3.5 5 4-5h3l-5.5 7L19 20h-3.5l-3.5-5-4 5H5l5.5-7L5 4z" fill="currentColor"/></svg>
-                    <span>X</span>
+                    <span class="link-content"><strong>X</strong><small>@mr_farshad_r</small></span><span class="link-arrow" aria-hidden="true">&#8599;</span>
                 </a>
                 <a href="https://roozbahani.com" target="_blank" rel="noopener" class="link-card">
                     <svg class="link-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9.5" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M3 12h18M12 3c2.5 2.5 4 5.5 4 9s-1.5 6.5-4 9c-2.5-2.5-4-5.5-4-9s1.5-6.5 4-9z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
-                    <span>Website</span>
+                    <span class="link-content"><strong>Website</strong><small>roozbahani.com</small></span><span class="link-arrow" aria-hidden="true">&#8599;</span>
                 </a>
                 <a href="mailto:farshadroozbahani20@gmail.com" class="link-card">
                     <svg class="link-icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="6" width="17" height="12" rx="2.2" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="m4.5 7 7.5 6 7.5-6" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                    <span>Email</span>
+                    <span class="link-content"><strong>Email</strong><small>Send a message</small></span><span class="link-arrow" aria-hidden="true">&#8599;</span>
                 </a>
             </div>
         </section>
 
         {% if site.posts.size > 0 %}
         <section class="section">
-            <h2 class="section-title"><span class="num">04</span> Latest Post</h2>
+            <h2 class="section-title"><span class="num">05</span> Latest Post</h2>
             <ul class="post-list">
                 {% assign latest = site.posts | first %}
                 <li class="post-item">
@@ -133,9 +187,9 @@ description: Farshad Roozbahani is a software engineer specializing in React, Ty
     <div class="panel-body">
         <h2>Profile</h2>
         <p>
-            Software Engineer with a strong focus on Front-End Development using React.
-            I build fast, accessible, and maintainable user interfaces — turning complex
-            requirements into clean component architectures and smooth user experiences.
+            Front-End Engineer and team lead with 10+ years of experience building web
+            and mobile products. I specialize in React and TypeScript, lead and mentor
+            engineering teams, and care deeply about accessible, maintainable interfaces.
         </p>
 
         <h2>Front-End</h2>
