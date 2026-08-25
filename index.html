@@ -158,11 +158,11 @@ description: Farshad Roozbahani is a software engineer specializing in React, Ty
             <h2 class="section-title"><span class="num">05</span> Latest Post</h2>
             <ul class="post-list">
                 {% assign latest = site.posts | first %}
-                <li class="post-item">
+                <li class="post-item" lang="{{ latest.lang | default: site.lang | default: 'en' }}" dir="{{ latest.direction | default: 'ltr' }}">
                     <a href="{{ latest.url | relative_url }}">
                         <span class="post-title">{{ latest.title }}</span>
                     </a>
-                    <span class="post-date">{{ latest.date | date: "%b %-d, %Y" }}</span>
+                    <span class="post-date">{% if latest.date_label %}{{ latest.date_label }}{% else %}{{ latest.date | date: "%b %-d, %Y" }}{% endif %}</span>
                 </li>
             </ul>
             <a href="{{ '/blog/' | relative_url }}" class="more-link">All posts &rarr;</a>

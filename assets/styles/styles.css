@@ -25,6 +25,7 @@ html {
     --accent: #a0a0a0;
     --font-sans: "Space Grotesk", "Helvetica Neue", sans-serif;
     --font-mono: "JetBrains Mono", "SFMono-Regular", Menlo, monospace;
+    --font-fa: "Vazirmatn", Tahoma, sans-serif;
     --max-width: 960px;
     --sidebar-width: 300px;
 }
@@ -761,6 +762,47 @@ p {
     padding-left: 16px;
     margin: 16px 0;
     color: var(--text-muted);
+}
+
+/* ── Persian / RTL content ── */
+
+[lang="fa"] {
+    font-family: var(--font-fa);
+}
+
+.post[dir="rtl"],
+.blog-item[dir="rtl"] {
+    text-align: right;
+}
+
+.post[dir="rtl"] .back-link,
+.post[dir="rtl"] time,
+.blog-item[dir="rtl"] .blog-date,
+.post-item[dir="rtl"] .post-date {
+    font-family: var(--font-fa);
+}
+
+.post[dir="rtl"] .post-content ul,
+.post[dir="rtl"] .post-content ol {
+    padding-right: 24px;
+    padding-left: 0;
+}
+
+.post[dir="rtl"] .post-content blockquote {
+    padding-right: 16px;
+    padding-left: 0;
+    border-right: 3px solid var(--border);
+    border-left: 0;
+}
+
+.post[dir="rtl"] .post-content code,
+.post[dir="rtl"] .post-content pre {
+    direction: ltr;
+    text-align: left;
+}
+
+.post-item[dir="rtl"] {
+    text-align: right;
 }
 
 /* ── 404 Page ── */

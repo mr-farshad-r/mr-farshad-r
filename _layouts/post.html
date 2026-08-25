@@ -2,12 +2,12 @@
 layout: default
 ---
 
-<article class="post">
+<article class="post" lang="{{ page.lang | default: site.lang | default: 'en' }}" dir="{{ page.direction | default: 'ltr' }}">
 
     <header class="post-header">
-        <a href="{{ '/' | relative_url }}" class="back-link">&larr; Back</a>
+        <a href="{{ '/blog/' | relative_url }}" class="back-link">{% if page.lang == 'fa' %}بازگشت به وبلاگ &larr;{% else %}&larr; Back to blog{% endif %}</a>
         <h1>{{ page.title }}</h1>
-        <time datetime="{{ page.date | date: '%Y-%m-%d' }}">{{ page.date | date: "%B %-d, %Y" }}</time>
+        <time datetime="{{ page.date | date: '%Y-%m-%d' }}">{% if page.date_label %}{{ page.date_label }}{% else %}{{ page.date | date: "%B %-d, %Y" }}{% endif %}</time>
     </header>
 
     <div class="post-content">
