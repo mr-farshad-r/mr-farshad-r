@@ -3,6 +3,7 @@ layout: post
 title: "Top 10 Soft Skills for Success in a Tech Company"
 date: 2026-08-25
 description: Ten practical soft skills that help technology professionals communicate clearly, collaborate effectively, handle change, and grow their careers.
+image: /assets/images/posts/soft-skills-tech.jpg
 ---
 
 Technical knowledge may help you get hired, but soft skills often determine how

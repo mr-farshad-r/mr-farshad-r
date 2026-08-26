@@ -677,6 +677,18 @@ p {
     border-bottom: 1px solid var(--border);
 }
 
+.post-hero {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 3 / 2;
+    object-fit: cover;
+    margin: 24px 0 28px;
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    background: var(--bg-card);
+}
+
 .post-header h1 {
     font-size: 1.8rem;
     font-weight: 600;

@@ -3,6 +3,7 @@ layout: post
 title: "JavaScript After ES6: Every Feature from ES2016 to ES2025"
 date: 2026-08-09
 description: A practical guide to the major JavaScript features introduced from ES2016 through ES2025, with clear explanations and code examples.
+image: /assets/images/posts/javascript-after-es6.jpg
 ---
 
 ES6 (also known as ES2015) was a massive milestone for JavaScript — it introduced
