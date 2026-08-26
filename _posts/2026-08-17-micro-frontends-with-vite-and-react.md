@@ -4,6 +4,7 @@ title: "Build Micro-Frontends with Vite and React"
 date: 2026-08-17
 description: Build a practical React micro-frontend with Vite, Module Federation, independent deployments, shared dependencies, and resilient loading.
 image: /assets/images/posts/micro-frontends-vite-react.jpg
+image_alt: Independent development teams connect modular interface panels into one unified web application.
 ---
 
 Micro-frontends split a browser application into features that teams can build,

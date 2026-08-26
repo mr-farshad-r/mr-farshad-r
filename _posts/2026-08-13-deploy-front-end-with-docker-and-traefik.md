@@ -4,6 +4,7 @@ title: "Deploy a Front-End App with Docker and Traefik"
 date: 2026-08-13
 description: Deploy a production front-end application with a multi-stage Docker build, Nginx, Traefik routing, and automatic HTTPS from Let's Encrypt.
 image: /assets/images/posts/deploy-front-end-docker-traefik.jpg
+image_alt: A front-end application travels through a container and secure routing gateway toward the cloud.
 ---
 
 A front-end deployment needs more than a development server. The application

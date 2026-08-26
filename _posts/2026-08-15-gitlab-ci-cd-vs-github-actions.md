@@ -4,6 +4,7 @@ title: "GitLab CI/CD vs GitHub Actions: A Practical Comparison"
 date: 2026-08-15
 description: Compare GitLab CI/CD and GitHub Actions across pipelines, runners, security, reuse, cost, and deployment workflows for front-end teams.
 image: /assets/images/posts/gitlab-vs-github-actions.jpg
+image_alt: Two parallel orange and blue CI/CD pipelines converge on the same successful deployment.
 ---
 
 GitLab CI/CD and GitHub Actions can both lint code, run tests, build containers,

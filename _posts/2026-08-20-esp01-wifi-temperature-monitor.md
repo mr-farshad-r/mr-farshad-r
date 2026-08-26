@@ -4,6 +4,7 @@ title: "Build a Wi-Fi Temperature Monitor with an ESP-01"
 date: 2026-08-20
 description: Turn an inexpensive ESP-01 and DS18B20 sensor into a simple local Wi-Fi temperature monitor with a browser dashboard and JSON endpoint.
 image: /assets/images/posts/esp01-temperature-monitor.jpg
+image_alt: An ESP-01 board and wired temperature probe send readings to a local browser dashboard.
 ---
 
 The ESP-01 is one of the smallest ways to add Wi-Fi to a project. It contains

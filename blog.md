@@ -16,8 +16,8 @@ description: Practical articles about React, JavaScript, TypeScript, front-end a
         {% for post in site.posts %}
         <li class="blog-item{% if post.image %} has-image{% endif %}" lang="{{ post.lang | default: site.lang | default: 'en' }}" dir="{{ post.direction | default: 'ltr' }}">
             {% if post.image %}
-            <a href="{{ post.url | relative_url }}" class="blog-thumb" aria-hidden="true" tabindex="-1">
-                <img src="{{ post.image | relative_url }}" alt="" width="1536" height="1024" loading="lazy" decoding="async">
+            <a href="{{ post.url | relative_url }}" class="blog-thumb">
+                <img src="{{ post.image | relative_url }}" alt="{{ post.image_alt | default: post.title | escape }}" loading="lazy" decoding="async">
             </a>
             {% endif %}
             <div class="blog-item-content">
