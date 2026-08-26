@@ -14,12 +14,19 @@ description: Practical articles about React, JavaScript, TypeScript, front-end a
 
     <ul class="blog-list">
         {% for post in site.posts %}
-        <li class="blog-item" lang="{{ post.lang | default: site.lang | default: 'en' }}" dir="{{ post.direction | default: 'ltr' }}">
-            <a href="{{ post.url | relative_url }}" class="blog-title">{{ post.title }}</a>
-            <span class="blog-date">{% if post.date_label %}{{ post.date_label }}{% else %}{{ post.date | date: "%b %-d, %Y" }}{% endif %}</span>
-            {% if post.excerpt %}
-            <p class="blog-excerpt">{{ post.excerpt | strip_html | truncatewords: 20 }}</p>
+        <li class="blog-item{% if post.image %} has-image{% endif %}" lang="{{ post.lang | default: site.lang | default: 'en' }}" dir="{{ post.direction | default: 'ltr' }}">
+            {% if post.image %}
+            <a href="{{ post.url | relative_url }}" class="blog-thumb" aria-hidden="true" tabindex="-1">
+                <img src="{{ post.image | relative_url }}" alt="" width="1536" height="1024" loading="lazy" decoding="async">
+            </a>
             {% endif %}
+            <div class="blog-item-content">
+                <a href="{{ post.url | relative_url }}" class="blog-title">{{ post.title }}</a>
+                <span class="blog-date">{% if post.date_label %}{{ post.date_label }}{% else %}{{ post.date | date: "%b %-d, %Y" }}{% endif %}</span>
+                {% if post.excerpt %}
+                <p class="blog-excerpt">{{ post.excerpt | strip_html | truncatewords: 20 }}</p>
+                {% endif %}
+            </div>
         </li>
         {% endfor %}
     </ul>
