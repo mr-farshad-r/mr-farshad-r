@@ -7,6 +7,8 @@ lang: fa
 direction: rtl
 description: "یک کپچای تصویری کوچک با Node.js که خروجی PNG می‌دهد، پاسخ را در Session نگه می‌دارد و تست هم دارد."
 excerpt: "بیایید یک کپچای تصویری کوچک با Node.js بسازیم؛ بدون سرویس خارجی و با خروجی PNG واقعی."
+image: /assets/images/posts/simple-nodejs-captcha.jpg
+image_alt: "تبدیل کاراکترهای کپچا به تصویر پیکسلی در یک دروازه امنیتی دیجیتال"
 ---
 
 برای یک فرم ساده همیشه لازم نیست سراغ reCAPTCHA یا سرویس‌های مشابه برویم. گاهی

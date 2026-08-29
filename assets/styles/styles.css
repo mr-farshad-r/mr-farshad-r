@@ -799,6 +799,93 @@ p {
     padding: 0;
 }
 
+/* ── Rouge syntax highlighting ── */
+
+.post-content .highlight {
+    margin: 16px 0;
+    border-radius: 8px;
+    background: #131313;
+}
+
+.post-content .highlight pre {
+    margin: 0;
+    background: #131313;
+    color: #d4d4d4;
+    line-height: 1.65;
+    tab-size: 2;
+}
+
+.post-content .highlight code {
+    color: #d4d4d4;
+}
+
+.highlight .c,
+.highlight .ch,
+.highlight .cd,
+.highlight .cm,
+.highlight .cpf,
+.highlight .c1,
+.highlight .cs { color: #6a9955; font-style: italic; }
+
+.highlight .k,
+.highlight .kc,
+.highlight .kd,
+.highlight .kn,
+.highlight .kp,
+.highlight .kr,
+.highlight .kt,
+.highlight .kv { color: #c586c0; }
+
+.highlight .s,
+.highlight .sa,
+.highlight .sb,
+.highlight .sc,
+.highlight .dl,
+.highlight .sd,
+.highlight .s2,
+.highlight .se,
+.highlight .sh,
+.highlight .si,
+.highlight .sx,
+.highlight .sr,
+.highlight .s1,
+.highlight .ss { color: #ce9178; }
+
+.highlight .na,
+.highlight .nc,
+.highlight .nd,
+.highlight .ne,
+.highlight .nf,
+.highlight .fm { color: #dcdcaa; }
+
+.highlight .nb,
+.highlight .bp,
+.highlight .no,
+.highlight .nv,
+.highlight .vc,
+.highlight .vg,
+.highlight .vi,
+.highlight .vm { color: #9cdcfe; }
+
+.highlight .m,
+.highlight .mb,
+.highlight .mf,
+.highlight .mh,
+.highlight .mi,
+.highlight .il,
+.highlight .mo { color: #b5cea8; }
+
+.highlight .nt { color: #569cd6; }
+.highlight .na { color: #9cdcfe; }
+.highlight .o,
+.highlight .ow { color: #d4d4d4; }
+.highlight .p { color: #c8c8c8; }
+.highlight .err { color: #f44747; }
+.highlight .gd { color: #f48771; background: #3b1515; }
+.highlight .gi { color: #89d185; background: #132b16; }
+.highlight .gh,
+.highlight .gu { color: #4ec9b0; font-weight: 500; }
+
 .post-content a {
     color: var(--text);
     border-bottom: 1px solid var(--text-dim);
