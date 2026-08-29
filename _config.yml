@@ -21,7 +21,7 @@ social:
 markdown: kramdown
 kramdown:
   input: GFM
-  syntax_highlighter: rouge
+  syntax_highlighter: null
 permalink: /blog/:year/:month/:day/:title/
 plugins:
   - jekyll-seo-tag
