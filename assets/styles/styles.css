@@ -40,6 +40,93 @@ body {
     line-height: 1.6;
 }
 
+.language-switcher {
+    position: fixed;
+    top: 20px;
+    right: 24px;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    padding: 6px 9px;
+    color: var(--text-dim);
+    background: rgba(24, 24, 24, .9);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    backdrop-filter: blur(10px);
+    font-family: var(--font-mono);
+    font-size: .7rem;
+}
+
+.language-switcher button {
+    padding: 1px 2px;
+    color: var(--text-dim);
+    background: none;
+    border: 0;
+    cursor: pointer;
+    font: inherit;
+}
+
+.language-switcher button[aria-pressed="true"],
+.language-switcher button:hover { color: var(--text); }
+
+.language-switcher button:focus-visible {
+    outline: 1px solid var(--text);
+    outline-offset: 3px;
+}
+
+html[dir="rtl"] body {
+    font-family: var(--font-fa);
+}
+
+html[dir="rtl"] .language-switcher {
+    right: auto;
+    left: 24px;
+    direction: ltr;
+}
+
+html[dir="rtl"] .role,
+html[dir="rtl"] .tagline,
+html[dir="rtl"] .section-title,
+html[dir="rtl"] .skill-col h3,
+html[dir="rtl"] .footer p,
+html[dir="rtl"] .panel-header span,
+html[dir="rtl"] .panel-body h2 {
+    font-family: var(--font-fa);
+}
+
+html[dir="rtl"] .nav-links a,
+html[dir="rtl"] .nav-links button { text-align: right; }
+
+html[dir="rtl"] .nav-links a::after,
+html[dir="rtl"] .nav-links button::after { transform: scaleX(-1); }
+
+html[dir="rtl"] .experience-list {
+    border-left: 0;
+    border-right: 1px solid var(--border);
+    margin-left: 0;
+    margin-right: 5px;
+}
+
+html[dir="rtl"] .experience-item { padding: 0 28px 28px 0; }
+html[dir="rtl"] .experience-item:last-child { padding-bottom: 0; }
+html[dir="rtl"] .experience-item::before { left: auto; right: -5px; }
+html[dir="rtl"] .skill-list li { padding-left: 0; padding-right: 14px; }
+html[dir="rtl"] .skill-list li::before { left: auto; right: 0; }
+html[dir="rtl"] .panel-body li { padding-left: 0; padding-right: 14px; }
+html[dir="rtl"] .panel-body li::before { left: auto; right: 2px; }
+
+html[dir="rtl"] .about-panel {
+    right: auto;
+    left: 0;
+    border-left: 0;
+    border-right: 1px solid var(--border);
+    transform: translateX(-100%);
+    box-shadow: 10px 0 40px rgba(0, 0, 0, .4);
+}
+
+html[dir="rtl"] .about-panel.open { transform: translateX(0); }
+
 /* ── Typography ── */
 
 a {

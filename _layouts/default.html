@@ -26,20 +26,22 @@
 
 <body class="layout-{{ page.layout | default: 'home' }}{% if page.direction == 'rtl' %} is-rtl{% endif %}">
 
+    <div class="language-switcher" role="group" aria-label="Language">
+        <button type="button" data-language="en" aria-pressed="true">EN</button>
+        <span aria-hidden="true">/</span>
+        <button type="button" data-language="fa" aria-pressed="false">FA</button>
+    </div>
+
     {{ content }}
 
     <script>
         // --- Terminal-style typing effect ---
-        const phrases = [
-            "scalable React apps.",
-            "accessible UIs.",
-            "design systems.",
-            "modern web experiences."
-        ];
+        let phrases = [];
         let phraseIndex = 0, charIndex = 0, isDeleting = false;
         const typedEl = document.getElementById("typed");
 
         function typeLoop() {
+            if (!phrases.length || !typedEl) return;
             const current = phrases[phraseIndex];
             if (isDeleting) {
                 typedEl.textContent = current.substring(0, charIndex - 1);
@@ -60,6 +62,14 @@
             setTimeout(typeLoop, delay);
         }
 
+        function setTypingPhrases(nextPhrases) {
+            phrases = nextPhrases;
+            phraseIndex = 0;
+            charIndex = 0;
+            isDeleting = false;
+            if (typedEl) typedEl.textContent = "";
+        }
+
         // --- Slide-in About panel ---
         function openAbout() {
             const panel = document.getElementById("about-panel");
@@ -74,8 +84,10 @@
         }
 
         // --- Start typing if element exists ---
-        if (typedEl) typeLoop();
+        window.setTypingPhrases = setTypingPhrases;
     </script>
+
+    <script src="{{ '/assets/scripts/i18n.js' | relative_url }}"></script>
 
     {% if page.layout == 'post' %}
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.12.0/highlight.min.js"></script>
