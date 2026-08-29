@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>کپچای ساده با Node.js</title>
+    <style>
+      body { font-family: system-ui, sans-serif; max-width: 32rem; margin: 4rem auto; padding: 1rem; }
+      form { display: grid; gap: 1rem; }
+      img { border: 1px solid #cbd5e1; border-radius: .75rem; }
+      input, button { font: inherit; padding: .7rem; }
+    </style>
+  </head>
+  <body>
+    <h1>فرم آزمایشی کپچا</h1>
+    <form id="captcha-form">
+      <img id="captcha-image" src="/captcha.png" alt="کد امنیتی">
+      <button type="button" id="refresh">ساخت کد تازه</button>
+      <label for="answer">کد داخل تصویر</label>
+      <input id="answer" name="answer" required autocomplete="off">
+      <button type="submit">بررسی</button>
+      <p id="message" role="status"></p>
+    </form>
+    <script>
+      const form = document.querySelector("#captcha-form");
+      const image = document.querySelector("#captcha-image");
+      const message = document.querySelector("#message");
+
+      function refreshCaptcha() {
+        image.src = `/captcha.png?t=${Date.now()}`;
+        form.answer.value = "";
+      }
+
+      document.querySelector("#refresh").addEventListener("click", refreshCaptcha);
+
+      form.addEventListener("submit", async (event) => {
+        event.preventDefault();
+        const response = await fetch("/verify-captcha", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ answer: form.answer.value }),
+        });
+        const result = await response.json();
+        message.textContent = result.ok ? "کد درست است." : "کد نادرست یا منقضی شده است.";
+        refreshCaptcha();
+      });
+    </script>
+  </body>
+</html>

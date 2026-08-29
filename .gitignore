@@ -9,6 +9,9 @@ vendor/
 # Ruby
 Gemfile.lock
 
+# Node.js
+node_modules/
+
 # IDE
 .idea/
 .vscode/
