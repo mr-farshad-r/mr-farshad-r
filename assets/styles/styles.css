@@ -908,6 +908,70 @@ p {
     color: var(--text-muted);
 }
 
+.post-content table {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    margin: 22px 0;
+    overflow-x: auto;
+    border: 1px solid var(--border);
+    border-spacing: 0;
+    border-radius: 10px;
+    background: var(--bg-card);
+    scrollbar-width: thin;
+    scrollbar-color: var(--border-hover) transparent;
+}
+
+.post-content thead {
+    color: var(--text);
+    background: var(--bg-hover);
+}
+
+.post-content th,
+.post-content td {
+    min-width: 96px;
+    padding: 11px 14px;
+    border-right: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+    text-align: left;
+    vertical-align: top;
+}
+
+.post-content th {
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    font-weight: 500;
+    letter-spacing: .04em;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+.post-content td {
+    font-size: 0.88rem;
+    line-height: 1.55;
+}
+
+.post-content tbody tr:last-child td {
+    border-bottom: 0;
+}
+
+.post-content th:last-child,
+.post-content td:last-child {
+    border-right: 0;
+}
+
+.post-content tbody tr {
+    transition: background-color .15s ease;
+}
+
+.post-content tbody tr:nth-child(even) {
+    background: rgba(255, 255, 255, .015);
+}
+
+.post-content tbody tr:hover {
+    background: var(--bg-hover);
+}
+
 /* ── Persian / RTL content ── */
 
 [lang="fa"] {
@@ -936,6 +1000,18 @@ p {
     padding-right: 16px;
     padding-left: 0;
     border-right: 3px solid var(--border);
+    border-left: 0;
+}
+
+.post[dir="rtl"] .post-content th,
+.post[dir="rtl"] .post-content td {
+    border-right: 0;
+    border-left: 1px solid var(--border);
+    text-align: right;
+}
+
+.post[dir="rtl"] .post-content th:last-child,
+.post[dir="rtl"] .post-content td:last-child {
     border-left: 0;
 }
 
@@ -1153,5 +1229,15 @@ p {
 
     .about-panel {
         width: 100vw;
+    }
+
+    .post-content table {
+        margin: 18px 0;
+    }
+
+    .post-content th,
+    .post-content td {
+        min-width: 84px;
+        padding: 9px 11px;
     }
 }
