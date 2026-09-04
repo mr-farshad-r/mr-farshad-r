@@ -1,0 +1,35 @@
+---
+layout: null
+permalink: /llms.txt
+sitemap: false
+---
+# Farshad Roozbahani
+
+> Personal website and technical blog of Farshad Roozbahani, a software engineer specializing in React, TypeScript, accessible interfaces, design systems, and modern web development.
+
+This site is available in English and Persian. Prefer the canonical HTTPS URLs listed below. Public pages and articles may be fetched and summarized with attribution. No authentication or interactive tools are required.
+
+## Main pages
+
+- [English home]({{ '/en/' | absolute_url }}): Professional overview, skills, experience, and contact links.
+- [Persian home]({{ '/fa/' | absolute_url }}): Persian-language professional overview.
+- [About in English]({{ '/about/en/' | absolute_url }}): Detailed background, skills, and contact information.
+- [About in Persian]({{ '/about/fa/' | absolute_url }}): Persian-language detailed background.
+- [English blog]({{ '/blog/en/' | absolute_url }}): Technical articles in English.
+- [Persian blog]({{ '/blog/fa/' | absolute_url }}): Technical articles in Persian.
+
+## Technical articles
+
+{% assign english_posts = site.posts | where_exp: 'post', "post.lang != 'fa'" %}
+{% for post in english_posts -%}
+- [{{ post.title }}]({{ post.url | absolute_url }}): {{ post.excerpt | strip_html | normalize_whitespace | truncatewords: 30 }}
+{% endfor %}
+{% assign persian_posts = site.posts | where: 'lang', 'fa' %}
+{% for post in persian_posts -%}
+- [{{ post.title }}]({{ post.url | absolute_url }}): {{ post.excerpt | strip_html | normalize_whitespace | truncatewords: 30 }}
+{% endfor %}
+
+## Discovery
+
+- [Sitemap]({{ '/sitemap.xml' | absolute_url }}): Complete crawlable URL inventory.
+- [Robots policy]({{ '/robots.txt' | absolute_url }}): Crawler permissions.

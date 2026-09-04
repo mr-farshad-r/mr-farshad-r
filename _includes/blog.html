@@ -16,7 +16,7 @@
         <li class="blog-item{% if post.image %} has-image{% endif %}" lang="{{ post.lang | default: site.lang | default: 'en' }}" dir="{{ post.direction | default: 'ltr' }}">
             {% if post.image %}
             <a href="{{ post.url | relative_url }}" class="blog-thumb">
-                <img src="{{ post.image | relative_url }}" alt="{{ post.image_alt | default: post.title | escape }}" loading="lazy" decoding="async">
+                <img src="{{ post.image | relative_url }}" alt="{{ post.image_alt | default: post.title | escape }}" width="1536" height="1024" loading="lazy" decoding="async">
             </a>
             {% endif %}
             <div class="blog-item-content">

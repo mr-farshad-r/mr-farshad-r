@@ -7,7 +7,7 @@ layout: default
     <header class="post-header">
         <a href="{% if page.lang == 'fa' %}{{ '/blog/fa/' | relative_url }}{% else %}{{ '/blog/en/' | relative_url }}{% endif %}" class="back-link">{% if page.lang == 'fa' %}بازگشت به وبلاگ &larr;{% else %}&larr; Back to blog{% endif %}</a>
         {% if page.image %}
-        <img class="post-hero" src="{{ page.image | relative_url }}" alt="{{ page.image_alt | default: page.title | escape }}" fetchpriority="high">
+        <img class="post-hero" src="{{ page.image | relative_url }}" alt="{{ page.image_alt | default: page.title | escape }}" width="1536" height="1024" decoding="async" fetchpriority="high">
         {% endif %}
         <h1>{{ page.title }}</h1>
         <time datetime="{{ page.date | date: '%Y-%m-%d' }}">{% if page.date_label %}{{ page.date_label }}{% else %}{{ page.date | date: "%B %-d, %Y" }}{% endif %}</time>

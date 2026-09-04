@@ -6,7 +6,10 @@
     <!-- Sidebar -->
     <aside class="sidebar">
 
-        <img src="{{ '/assets/images/avatar.png' | relative_url }}" alt="Farshad Roozbahani" class="avatar" id="profile-img">
+        <picture>
+            <source srcset="{{ '/assets/images/avatar.webp' | relative_url }}" type="image/webp">
+            <img src="{{ '/assets/images/avatar.png' | relative_url }}" alt="Farshad Roozbahani" class="avatar" id="profile-img" width="120" height="120" decoding="async" fetchpriority="high">
+        </picture>
 
         <h1 class="name">Farshad Roozbahani</h1>
         <p class="role">{{ t.role }}</p>

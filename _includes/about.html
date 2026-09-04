@@ -5,7 +5,10 @@
     <header class="about-header">
         <a href="{{ '/' | append: page_lang | append: '/' | relative_url }}" class="back-link">{{ t.back }}</a>
         <div class="about-identity">
-            <img src="{{ '/assets/images/avatar.png' | relative_url }}" alt="Farshad Roozbahani" class="avatar">
+            <picture>
+                <source srcset="{{ '/assets/images/avatar.webp' | relative_url }}" type="image/webp">
+                <img src="{{ '/assets/images/avatar.png' | relative_url }}" alt="Farshad Roozbahani" class="avatar" width="88" height="88" decoding="async" fetchpriority="high">
+            </picture>
             <div>
                 <h1>{{ t.about }}</h1>
                 <p>{{ t.role }}</p>
