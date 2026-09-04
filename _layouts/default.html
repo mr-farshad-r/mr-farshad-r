@@ -2,9 +2,16 @@
 <html lang="{{ page.lang | default: site.lang | default: 'en' }}" dir="{{ page.direction | default: 'ltr' }}">
 
 <head>
+    {% assign page_lang = page.lang | default: site.lang | default: 'en' %}
+    {% assign t = site.data.i18n[page_lang] %}
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     {% seo %}
+    {% if page.en_url and page.fa_url %}
+    <link rel="alternate" hreflang="en" href="{{ page.en_url | absolute_url }}">
+    <link rel="alternate" hreflang="fa" href="{{ page.fa_url | absolute_url }}">
+    <link rel="alternate" hreflang="x-default" href="{{ page.en_url | absolute_url }}">
+    {% endif %}
     {% if page.robots %}<meta name="robots" content="{{ page.robots }}">{% endif %}
     <link rel="icon" type="image/png" href="{{ '/assets/images/avatar.png' | relative_url }}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -26,17 +33,17 @@
 
 <body class="layout-{{ page.layout | default: 'home' }}{% if page.direction == 'rtl' %} is-rtl{% endif %}">
 
-    <div class="language-switcher" role="group" aria-label="Language">
-        <button type="button" data-language="en" aria-pressed="true">EN</button>
+    <nav class="language-switcher" aria-label="{% if page.lang == 'fa' %}زبان{% else %}Language{% endif %}">
+        <a href="{{ page.en_url | default: '/en/' | relative_url }}" lang="en"{% if page.lang == 'en' %} aria-current="page"{% endif %}>EN</a>
         <span aria-hidden="true">/</span>
-        <button type="button" data-language="fa" aria-pressed="false">FA</button>
-    </div>
+        <a href="{{ page.fa_url | default: '/fa/' | relative_url }}" lang="fa"{% if page.lang == 'fa' %} aria-current="page"{% endif %}>FA</a>
+    </nav>
 
     {{ content }}
 
     <script>
         // --- Terminal-style typing effect ---
-        let phrases = [];
+        const phrases = {{ t.phrases | default: empty | jsonify }};
         let phraseIndex = 0, charIndex = 0, isDeleting = false;
         const typedEl = document.getElementById("typed");
 
@@ -62,32 +69,9 @@
             setTimeout(typeLoop, delay);
         }
 
-        function setTypingPhrases(nextPhrases) {
-            phrases = nextPhrases;
-            phraseIndex = 0;
-            charIndex = 0;
-            isDeleting = false;
-            if (typedEl) typedEl.textContent = "";
-        }
-
-        // --- Slide-in About panel ---
-        function openAbout() {
-            const panel = document.getElementById("about-panel");
-            panel.classList.add("open");
-            document.body.style.overflowY = "hidden";
-        }
-
-        function closeAbout() {
-            const panel = document.getElementById("about-panel");
-            panel.classList.remove("open");
-            document.body.style.overflowY = "auto";
-        }
-
         // --- Start typing if element exists ---
-        window.setTypingPhrases = setTypingPhrases;
+        if (typedEl) typeLoop();
     </script>
-
-    <script src="{{ '/assets/scripts/i18n.js' | relative_url }}"></script>
 
     {% if page.layout == 'post' %}
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.12.0/highlight.min.js"></script>

@@ -5,7 +5,7 @@ layout: default
 <article class="post" lang="{{ page.lang | default: site.lang | default: 'en' }}" dir="{{ page.direction | default: 'ltr' }}">
 
     <header class="post-header">
-        <a href="{{ '/blog/' | relative_url }}" class="back-link">{% if page.lang == 'fa' %}بازگشت به وبلاگ &larr;{% else %}&larr; Back to blog{% endif %}</a>
+        <a href="{% if page.lang == 'fa' %}{{ '/blog/fa/' | relative_url }}{% else %}{{ '/blog/en/' | relative_url }}{% endif %}" class="back-link">{% if page.lang == 'fa' %}بازگشت به وبلاگ &larr;{% else %}&larr; Back to blog{% endif %}</a>
         {% if page.image %}
         <img class="post-hero" src="{{ page.image | relative_url }}" alt="{{ page.image_alt | default: page.title | escape }}" fetchpriority="high">
         {% endif %}
