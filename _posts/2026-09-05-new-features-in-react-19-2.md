@@ -224,3 +224,4 @@ change, and profile the result with better evidence.
 - [useEffectEvent reference](https://react.dev/reference/react/useEffectEvent)
 - [cacheSignal reference](https://react.dev/reference/react/cacheSignal)
 - [React Compiler 1.0](https://react.dev/blog/2025/10/07/react-compiler-1)
+
