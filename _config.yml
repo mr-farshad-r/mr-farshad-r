@@ -30,6 +30,12 @@ defaults:
       path: ""
     values:
       image: /assets/images/avatar.png
+  - scope:
+      path: ""
+      type: posts
+    values:
+      image: /assets/images/posts/default-post-placeholder.jpg
+      image_alt: تصویر انتزاعی مرتبط با برنامه‌نویسی و توسعه نرم‌افزار
 exclude:
   - Gemfile
   - Gemfile.lock
