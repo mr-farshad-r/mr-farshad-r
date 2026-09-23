@@ -8,5 +8,6 @@ permalink: /blog/
 canonical_url: https://roozbahani.com/blog/en/
 en_url: /blog/en/
 fa_url: /blog/fa/
+sitemap: false
 ---
 {% include blog.html %}

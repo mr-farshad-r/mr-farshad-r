@@ -9,5 +9,6 @@ permalink: /about/
 canonical_url: https://roozbahani.com/about/en/
 en_url: /about/en/
 fa_url: /about/fa/
+sitemap: false
 ---
 {% include about.html %}
