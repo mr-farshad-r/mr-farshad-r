@@ -12,7 +12,7 @@
     <link rel="alternate" hreflang="fa" href="{{ page.fa_url | absolute_url }}">
     <link rel="alternate" hreflang="x-default" href="{{ page.en_url | absolute_url }}">
     {% endif %}
-    {% if page.robots %}<meta name="robots" content="{{ page.robots }}">{% endif %}
+    <meta name="robots" content="{{ page.robots | default: 'max-image-preview:large' }}">
     <link rel="icon" type="image/png" href="{{ '/assets/images/avatar.png' | relative_url }}">
     {% if page.preload_avatar %}<link rel="preload" as="image" href="{{ '/assets/images/avatar.webp' | relative_url }}" type="image/webp" fetchpriority="high">{% endif %}
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -25,9 +25,6 @@
     <link href="{{ font_url }}" rel="stylesheet" media="print" onload="this.media='all'">
     <noscript><link href="{{ font_url }}" rel="stylesheet"></noscript>
     <link href="{{ '/assets/styles/styles.css' | relative_url }}" rel="stylesheet">
-    {% if page.layout == 'post' %}
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.12.0/styles/github-dark.min.css" rel="stylesheet">
-    {% endif %}
 
 </head>
 
@@ -87,11 +84,6 @@
         // --- Start typing if element exists ---
         if (typedEl) typeLoop();
     </script>
-
-    {% if page.layout == 'post' %}
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.12.0/highlight.min.js"></script>
-    <script>hljs.highlightAll();</script>
-    {% endif %}
 
 </body>
 

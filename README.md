@@ -6,7 +6,7 @@ requirements into clean component architectures and smooth UX.
 
 Programming is not just a job for me — it's a craft I keep refining every day.
 
-🌐 **Website:** [roozbahani.com](https://roozbahani.com/ref=github)
+🌐 **Website:** [roozbahani.com](https://roozbahani.com/en/)
 
 ---
 

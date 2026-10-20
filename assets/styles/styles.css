@@ -982,14 +982,8 @@ p {
 }
 
 .post-content pre code {
-    background: none;
-    padding: 0;
-}
-
-/* Highlight.js owns token colors; these rules keep its blocks consistent. */
-
-.post-content pre code.hljs {
     display: block;
+    padding: 0;
     background: transparent;
     color: #c9d1d9;
     line-height: 1.65;
@@ -1340,4 +1334,122 @@ p {
         min-width: 84px;
         padding: 9px 11px;
     }
+}
+
+/* Build-time Rouge highlighting, using its GitHub Dark theme. */
+.post-content .highlight table td { padding: 5px; }
+.post-content .highlight table pre { margin: 0; }
+.post-content .highlight, .post-content .highlight .w {
+  color: #c9d1d9;
+  background-color: transparent;
+}
+.post-content .highlight .k, .post-content .highlight .kd, .post-content .highlight .kn, .post-content .highlight .kp, .post-content .highlight .kr, .post-content .highlight .kt, .post-content .highlight .kv {
+  color: #ff7b72;
+}
+.post-content .highlight .gr {
+  color: #f0f6fc;
+}
+.post-content .highlight .gd {
+  color: #ffdcd7;
+  background-color: #67060c;
+}
+.post-content .highlight .nb {
+  color: #ffa657;
+}
+.post-content .highlight .nc {
+  color: #ffa657;
+}
+.post-content .highlight .no {
+  color: #ffa657;
+}
+.post-content .highlight .nn {
+  color: #ffa657;
+}
+.post-content .highlight .sr {
+  color: #7ee787;
+}
+.post-content .highlight .na {
+  color: #7ee787;
+}
+.post-content .highlight .nt {
+  color: #7ee787;
+}
+.post-content .highlight .gi {
+  color: #aff5b4;
+  background-color: #033a16;
+}
+.post-content .highlight .ges {
+  font-weight: bold;
+  font-style: italic;
+}
+.post-content .highlight .kc {
+  color: #79c0ff;
+}
+.post-content .highlight .l, .post-content .highlight .ld, .post-content .highlight .m, .post-content .highlight .mb, .post-content .highlight .mf, .post-content .highlight .mh, .post-content .highlight .mi, .post-content .highlight .il, .post-content .highlight .mo, .post-content .highlight .mx {
+  color: #79c0ff;
+}
+.post-content .highlight .sb {
+  color: #79c0ff;
+}
+.post-content .highlight .bp {
+  color: #79c0ff;
+}
+.post-content .highlight .ne {
+  color: #79c0ff;
+}
+.post-content .highlight .nl {
+  color: #79c0ff;
+}
+.post-content .highlight .py {
+  color: #79c0ff;
+}
+.post-content .highlight .nv, .post-content .highlight .vc, .post-content .highlight .vg, .post-content .highlight .vi, .post-content .highlight .vm {
+  color: #79c0ff;
+}
+.post-content .highlight .o, .post-content .highlight .ow {
+  color: #79c0ff;
+}
+.post-content .highlight .gh {
+  color: #1f6feb;
+  font-weight: bold;
+}
+.post-content .highlight .gu {
+  color: #1f6feb;
+  font-weight: bold;
+}
+.post-content .highlight .s, .post-content .highlight .sa, .post-content .highlight .sc, .post-content .highlight .dl, .post-content .highlight .sd, .post-content .highlight .s2, .post-content .highlight .se, .post-content .highlight .sh, .post-content .highlight .sx, .post-content .highlight .s1, .post-content .highlight .ss {
+  color: #a5d6ff;
+}
+.post-content .highlight .nd {
+  color: #d2a8ff;
+}
+.post-content .highlight .nf, .post-content .highlight .fm {
+  color: #d2a8ff;
+}
+.post-content .highlight .err {
+  color: #f0f6fc;
+  background-color: #8e1519;
+}
+.post-content .highlight .c, .post-content .highlight .ch, .post-content .highlight .cd, .post-content .highlight .cm, .post-content .highlight .cp, .post-content .highlight .cpf, .post-content .highlight .c1, .post-content .highlight .cs {
+  color: #8b949e;
+}
+.post-content .highlight .gl {
+  color: #8b949e;
+}
+.post-content .highlight .gt {
+  color: #8b949e;
+}
+.post-content .highlight .ni {
+  color: #c9d1d9;
+}
+.post-content .highlight .si {
+  color: #c9d1d9;
+}
+.post-content .highlight .ge {
+  color: #c9d1d9;
+  font-style: italic;
+}
+.post-content .highlight .gs {
+  color: #c9d1d9;
+  font-weight: bold;
 }

@@ -6,7 +6,7 @@ baseurl: ""
 lang: en
 author:
   name: Farshad Roozbahani
-  url: https://roozbahani.com
+  url: https://roozbahani.com/about/en/
   picture: /assets/images/avatar.png
 twitter:
   username: mr_farshad_r
@@ -21,7 +21,7 @@ social:
 markdown: kramdown
 kramdown:
   input: GFM
-  syntax_highlighter: null
+  syntax_highlighter: rouge
 permalink: /blog/:year/:month/:day/:title/
 plugins:
   - jekyll-seo-tag
@@ -41,3 +41,5 @@ exclude:
   - Gemfile.lock
   - node_modules
   - vendor
+  - scripts
+  - SEO.md

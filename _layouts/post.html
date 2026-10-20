@@ -10,6 +10,7 @@ layout: default
         <img class="post-hero" src="{{ page.image | relative_url }}" alt="{{ page.image_alt | default: page.title | escape }}" width="1536" height="1024" decoding="async" fetchpriority="high">
         {% endif %}
         <h1>{{ page.title }}</h1>
+        <p>{% if page.lang == 'fa' %}نویسنده: <a rel="author" href="{{ '/about/fa/' | relative_url }}">فرشاد روزبهانی</a>{% else %}By <a rel="author" href="{{ '/about/en/' | relative_url }}">{{ site.author.name }}</a>{% endif %}</p>
         <time datetime="{{ page.date | date: '%Y-%m-%d' }}">{% if page.date_label %}{{ page.date_label }}{% else %}{{ page.date | date: "%B %-d, %Y" }}{% endif %}</time>
     </header>
 
