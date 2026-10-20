@@ -15,7 +15,8 @@
         <p class="role">{{ t.role }}</p>
 
         <p class="tagline">
-            {{ t.building }} <span class="typed" id="typed"></span><span class="cursor">_</span>
+            {% for phrase in t.phrases %}<span class="tagline-reserve" aria-hidden="true">{{ t.building }} {{ phrase }}_</span>{% endfor %}
+            <span>{{ t.building }} <span class="typed" id="typed">{{ t.phrases | first }}</span><span class="cursor" aria-hidden="true">_</span></span>
         </p>
 
         <nav class="nav-links" aria-label="Primary navigation">

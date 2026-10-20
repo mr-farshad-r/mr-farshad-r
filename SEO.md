@@ -38,3 +38,33 @@ After deployment, verify the IndexNow ownership file is accessible and submit th
 Search Console reports can lag. Recheck the discovered URLs after Google recrawls them. Requests may take days or weeks and do not guarantee inclusion. Bing Webmaster Tools confirmed the sitemap was submitted and crawled successfully on 20 October, with 27 discovered URLs and no errors or warnings.
 
 Sources: [Google recrawl guidance](https://developers.google.com/search/docs/crawling-indexing/ask-google-to-recrawl), [OpenAI crawler documentation](https://developers.openai.com/api/docs/bots), [IndexNow protocol](https://www.indexnow.org/documentation), [Jekyll syntax highlighting](https://jekyllrb.com/docs/liquid/tags/#code-snippet-highlighting).
+
+## Core Web Vitals implementation — 20 October 2026
+
+- Article images now have 384, 768, and 1536-pixel WebP alternatives. The browser selects an appropriate size; original JPEGs remain as fallbacks and social-preview images. Across 22 images, the alternatives are respectively 96.4%, 89.6%, and 71.1% smaller than the originals.
+- Hero images and the first blog thumbnail load eagerly; later thumbnails load lazily. Explicit dimensions preserve their layout space.
+- The animated homepage tagline reserves enough space for every phrase and respects reduced-motion preferences. Font loading uses `display=optional` to avoid late font swaps on slow connections.
+- The existing Clarity integration starts asynchronously without waiting for interaction or ten seconds. This reduces missed short visits; it also means Clarity's work is included in initial-load measurements.
+
+### Visitor measurement
+
+Use the existing [Clarity dashboard](https://clarity.microsoft.com/projects/view/l7t2mnoj0i/dashboard), under **Performance → Performance Overview / URL Performance**. Clarity natively reports LCP, INP, and CLS at the 75th percentile, so a second analytics SDK is unnecessary. Thresholds for good performance are LCP ≤ 2.5 seconds, INP ≤ 200 milliseconds, and CLS ≤ 0.1 (unitless).
+
+The preview loaded the Clarity script successfully and its collection endpoint returned HTTP 204. Dashboard aggregation and production visitor percentiles still require incoming traffic. Ad blockers and browser support can limit measurement, and INP requires a qualifying interaction.
+
+### Local lab comparison
+
+Lighthouse 13.5.0, default mobile settings, one sequential run per version on localhost. Baseline is commit `31e6b8d`; each version was built with the same local Jekyll installation. External fonts and analytics were enabled. These are diagnostic lab results, not production field percentiles or a guaranteed score.
+
+| Page | Performance score | LCP | CLS | Total blocking time |
+| --- | --- | --- | --- | --- |
+| FSM article, before | 86 | 4.20 s | 0.0094 | 0 ms |
+| FSM article, after | 100 | 1.36 s | 0 | 46 ms |
+| Persian homepage, before | 97 | 2.55 s | 0.0408 | 0 ms |
+| Persian homepage, after | 100 | 1.05 s | 0.0056 | 2 ms |
+
+Total blocking time is a lab diagnostic, not INP. The article audit selected the 768-pixel WebP at about 34 KB. Visual checks confirmed Persian typography, stable tagline height across different phrases, and thumbnail rendering. All 27 pages passed the SEO checker, including responsive-image file checks. A JavaScript execution check confirmed asynchronous analytics startup and no typing timers when reduced motion is requested.
+
+When adding or replacing article JPEGs, run `python3 scripts/optimize-images.py` (requires `cwebp`), build the site, and run the SEO checker before publishing. Unknown images retain their JPEG fallback until alternatives are generated.
+
+References: [Clarity Performance widget](https://learn.microsoft.com/en-us/clarity/insights/performance-widget), [Clarity installation verification](https://learn.microsoft.com/en-us/clarity/setup-and-installation/clarity-setup), [Google LCP optimization](https://web.dev/articles/optimize-lcp).

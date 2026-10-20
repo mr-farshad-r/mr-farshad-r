@@ -68,6 +68,11 @@ def check(root):
                       "Claude-SearchBot"):
             assert robots.can_fetch(agent, url), f"{agent} blocked: {url}"
         for tag, attrs in page.tags:
+            for candidate in attrs.get("srcset", "").split(","):
+                if candidate.strip():
+                    resource = urljoin(url, candidate.split()[0])
+                    if urlsplit(resource).netloc == "roozbahani.com":
+                        assert path_for(resource).is_file(), f"Missing image: {resource}"
             target = attrs.get("src") if tag in ("img", "script") else attrs.get("href")
             if not target:
                 continue
@@ -79,6 +84,8 @@ def check(root):
             assert "highlight.min.js" not in html and "hljs.highlightAll" not in html, url
             if "<pre" in html:
                 assert page.select("div", **{"class": "highlight"}), url
+            assert page.select("source", type="image/webp"), f"Missing responsive image: {url}"
+            assert page.select("img", fetchpriority="high"), f"Hero priority missing: {url}"
 
     for url, page in pages.items():
         alternates = {a["hreflang"]: a["href"] for a in page.select("link", rel="alternate")

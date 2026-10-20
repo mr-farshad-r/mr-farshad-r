@@ -208,10 +208,18 @@ p {
 }
 
 .tagline {
+    display: grid;
     font-family: var(--font-mono);
     font-size: 0.82rem;
     color: var(--text-muted);
     line-height: 1.5;
+}
+
+.tagline > span { grid-area: 1 / 1; }
+.tagline-reserve { visibility: hidden; }
+
+@media (prefers-reduced-motion: reduce) {
+    .tagline .cursor { animation: none; }
 }
 
 .typed {

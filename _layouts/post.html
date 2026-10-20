@@ -7,7 +7,8 @@ layout: default
     <header class="post-header">
         <a href="{% if page.lang == 'fa' %}{{ '/blog/fa/' | relative_url }}{% else %}{{ '/blog/en/' | relative_url }}{% endif %}" class="back-link">{% if page.lang == 'fa' %}بازگشت به وبلاگ &larr;{% else %}&larr; Back to blog{% endif %}</a>
         {% if page.image %}
-        <img class="post-hero" src="{{ page.image | relative_url }}" alt="{{ page.image_alt | default: page.title | escape }}" width="1536" height="1024" decoding="async" fetchpriority="high">
+        {% assign image_alt = page.image_alt | default: page.title %}
+        {% include post-image.html image=page.image alt=image_alt %}
         {% endif %}
         <h1>{{ page.title }}</h1>
         <p>{% if page.lang == 'fa' %}نویسنده: <a rel="author" href="{{ '/about/fa/' | relative_url }}">فرشاد روزبهانی</a>{% else %}By <a rel="author" href="{{ '/about/en/' | relative_url }}">{{ site.author.name }}</a>{% endif %}</p>

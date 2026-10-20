@@ -1,0 +1,9 @@
+{% assign image_base = include.image | remove: '.jpg' %}
+{% assign webp_path = image_base | append: '-768.webp' %}
+{% assign webp_file = site.static_files | where: 'path', webp_path | first %}
+<picture>
+    {% if webp_file %}
+    <source type="image/webp" srcset="{{ image_base | append: '-384.webp' | relative_url }} 384w, {{ webp_path | relative_url }} 768w, {{ image_base | append: '-1536.webp' | relative_url }} 1536w" sizes="{% if include.thumbnail %}(max-width: 480px) 112px, 160px{% else %}(max-width: 680px) calc(100vw - 48px), 632px{% endif %}">
+    {% endif %}
+    <img {% unless include.thumbnail %}class="post-hero" {% endunless %}src="{{ include.image | relative_url }}" alt="{{ include.alt | escape }}" width="1536" height="1024" decoding="async" {% if include.thumbnail and include.priority != true %}loading="lazy"{% else %}loading="eager" fetchpriority="high"{% endif %}>
+</picture>
