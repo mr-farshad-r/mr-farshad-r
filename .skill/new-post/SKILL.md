@@ -96,6 +96,8 @@ Replace `<stem>` and the width/output suffix for each invocation. Verify all thr
 
 ## Verify and deliver
 
+Before reporting a new post complete, check that `image` points to its dedicated cover rather than `default-post-placeholder.jpg`, all three responsive variants exist, and `image_alt` describes the generated artwork. Apply this check when expanding or revising a newly created post too. If artwork is blocked, report the post as unfinished unless the user explicitly requested text only or postponed the cover.
+
 Check front matter parses, language and direction agree, filename and metadata dates match, local links and images exist, and code fences are balanced. Review the article for unsupported claims and leftover example values. Run executable examples when included and practical; report anything not executed.
 
 Run `git diff --check`. When the local bundle is available, build to a temporary output directory and use the existing site checker:

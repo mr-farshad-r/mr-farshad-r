@@ -6,8 +6,8 @@ lang: en
 direction: ltr
 description: "Learn Next.js as a React developer with practical App Router examples covering routing, layouts, Server Components, data fetching, and loading states."
 excerpt: "Your React skills are the starting point. Learn how Next.js connects your components to routes, server-side data, and interactive experiences."
-image: /assets/images/posts/default-post-placeholder.jpg
-image_alt: "Default blog post cover illustration."
+image: /assets/images/posts/from-react-to-next.jpg
+image_alt: "Modular interface panels connect through cyan paths to a browser and server stack, with an amber connection marking the server-client boundary."
 ---
 
 You know how to build React components. You can manage state, handle events, write custom hooks, and turn a design into a working interface.
